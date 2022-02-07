@@ -1,0 +1,31 @@
+@use './variables' as vars;
+
+@mixin phone{
+   @media (min-width: map-get($map:vars.$grid-breakpoints , $key: 'sm')){
+      @content;
+   }
+};
+
+@mixin tablet{
+   @media (min-width: map-get($map: vars.$grid-breakpoints, $key: 'md')){
+      @content;
+   }
+}
+
+@mixin laptop{ 
+   @media (min-width: map-get($map: vars.$grid-breakpoints, $key:'lg' )){
+      @content;
+   }
+}
+
+@mixin desktop{
+   @media (min-width: map-get($map: vars.$grid-breakpoints, $key: 'xl')){
+      @content;
+   }
+}
+
+@mixin desktop-lg {
+   @media (min-width: map-get($map: vars.$grid-breakpoints, $key: 'xxl' )){
+      @content;
+   }
+}

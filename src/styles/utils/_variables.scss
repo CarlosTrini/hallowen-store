@@ -1,0 +1,53 @@
+// ---------------------------FONT 
+$font-roboto: 'Roboto', sans-serif; // 300, 400, 700, 900
+$font-dancing: 'Dancing Script', cursive;//  400, 600
+
+$thin: 300;
+$regular: 400; 
+$bold: 700;
+$black: 900;
+
+$titles-sizes-normal: (
+   'h1': 38px,
+   'h2' : 35px,
+   'h3': 28px,
+   'h4': 21px
+);
+$titles-sizes-small:(
+   'h1': 38px,
+   'h2' : 33px,
+   'h3': 25px,
+   'h4': 19px
+);
+
+// -------------------------COLORS
+$main-color:  #f66232;
+$second-color: #604266;
+$second-color-alt: #d9d6d6;
+$container-color: #212627;
+$black-color: #171a1b;
+$black-color-alt: #2f3233;
+$white-color: #f0e9e9;
+$linear-orange-white: linear-gradient(to bottom, $main-color 0%, $white-color 100%) ;
+$linear-orange-purple: linear-gradient(to right, $main-color 0%, $second-color 100%);
+$linear-container: linear-gradient(to bottom, $main-color 0%, #aa52ba 50%, $second-color 100%);
+$linear-purple-white: linear-gradient(to right, $white-color 0%, $main-color 100%);
+$linear-purple-orange: linear-gradient(to right, $second-color 0%, $main-color );
+
+
+//-------------------------------------- SCREEN
+$grid-breakpoints: (
+  sm: 576px, //phone
+  md: 768px, //tablet
+  lg: 992px, //laptop
+  xl: 1200px, //desktop
+  xxl: 1400px //desktop-lg
+);
+
+// ------------------------- IMG SIZES
+$images-sizes: (
+   'sm': 4rem,
+   'md': 10rem,
+   'lg': 15rem,
+   'xl': 20rem
+);

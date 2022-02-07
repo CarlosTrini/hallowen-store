@@ -1,0 +1,49 @@
+@use '../utils/variables'as vars;
+
+.newsletter {
+   margin: 10rem auto;
+
+   p{
+      font-size: 1.4rem;
+      text-align: center;
+      color: vars.$white-color;
+      margin: .5rem auto 1.5rem;
+   }
+}
+
+.news__form {
+   width: 90%;
+   margin: auto;
+   padding: .5rem;
+   background: vars.$linear-purple-orange;
+
+
+   &-field {
+      display: flex;
+      flex-wrap: wrap;
+
+      input {
+         padding: .5rem 0;
+      }
+
+      input[type="text"] {
+         width: 100%;
+         max-width: 40rem;
+         margin: auto;
+         padding: .5rem;
+         font-weight: vars.$black;
+         border: none;
+      }
+
+      input[type="submit"] {
+         flex: 1;
+         font-weight: vars.$black;
+         background-color: transparent;
+         color: vars.$white-color;
+         border: none;  
+         &:hover{
+            cursor: pointer;
+         }
+      }
+   }
+}

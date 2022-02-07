@@ -1,0 +1,36 @@
+@use '../utils/variables'as vars;
+@use '../utils/mixins'as mixins;
+
+
+.footer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   padding: 1rem 0 3rem;
+   border-top: .1rem solid vars.$black-color-alt;
+   @include mixins.tablet{
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+
+   &__img{
+      width: 15rem;
+   }
+
+   &-titles{
+      margin-bottom: 1rem;
+      color: vars.$main-color;
+   }
+
+   ul{
+      display: grid;
+      gap: 1rem;
+      text-align: center;
+   }
+   a{
+      color: vars.$white-color;
+   }
+}
+

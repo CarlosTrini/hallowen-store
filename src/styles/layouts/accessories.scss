@@ -1,0 +1,86 @@
+@use '../utils/variables'as vars;
+
+.accessories__container {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.accessory__card {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   max-width: 60rem;
+   padding: 1rem;
+   margin: auto;
+   border-radius: 3rem;
+   border: .4rem double vars.$black-color-alt;
+   text-align: center;
+   transition: background .3s ease-in-out;
+
+   &:hover {
+      background-color: vars.$black-color-alt;
+   }
+
+   &:nth-child(odd) {
+      .accessory__card-img {
+         order: 1;
+      }
+   }
+
+   &-img {
+      flex: 0 1 20rem;
+      height: 25rem;
+   }
+
+   &-body {
+      flex: 1 1 20rem;
+      color: vars.$main-color;
+      line-height: 1.5;
+
+      .accessory-title {
+         margin-top: 1rem;
+         text-transform: capitalize;
+      }
+
+      .accessory-characteristic {
+         margin: 1rem 0;
+         text-transform: capitalize;
+         font-weight: vars.$bold;
+         color: transparent;
+         background: vars.$linear-orange-white;
+         background-clip: text;
+      }
+   }
+
+   &-details-buy {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      margin-top: 2rem;
+      font-weight: vars.$bold;
+
+      p:nth-child(1) {
+         color: vars.$main-color;
+         text-decoration: line-through;
+      }
+
+      p:nth-child(2) {
+         color: vars.$white-color;
+         font-size: 2.5rem;
+      }
+
+      a {
+         padding: .5rem 1rem;
+         border-radius: 1rem;
+         color: vars.$white-color;
+         font-weight: vars.$black;
+         font-size: 1.5rem;
+         background-color: vars.$main-color;
+      }
+   }
+
+}

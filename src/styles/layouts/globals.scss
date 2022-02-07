@@ -1,0 +1,140 @@
+
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+
+// ---------------------TAGS STYLES
+::-webkit-scrollbar{
+   width: 0.7rem;
+   background-color: vars.$black-color;
+}
+::-webkit-scrollbar-thumb{
+   border-radius: 0.5rem;
+   background:vars.$main-color;
+}
+html{
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+*,*::after,*::before{
+   box-sizing: inherit;
+}
+body{
+   font-family: vars.$font-roboto;
+   background-color: vars.$black-color;
+}
+
+@each $name, $value in vars.$titles-sizes-small{
+   #{$name}{
+      font-size: $value
+   }
+}
+@include mixins.tablet{
+   @each $name, $value in vars.$titles-sizes-normal{
+      #{$name}{
+         font-size: $value;
+      }
+   }
+}
+
+h1, h2, h3, h4, p{
+   margin: 0;
+   padding: 0;
+}
+p{
+   font-size: 20px
+}
+img{
+  width:100%;
+  height: 100%;
+}
+figure{
+   margin: 0;
+}
+ul{
+   padding: 0;
+   margin: 0;
+}
+li{
+   list-style: none;
+}
+a{
+   color: vars.$black-color;
+   text-decoration: none;
+}
+// --------------------GLOBAL STYLES
+.container{
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.titles-sections{
+   margin:1rem auto 2rem;
+   width: fit-content;
+   font-size: 3rem;
+   color: transparent;
+   background: vars.$linear-purple-orange;
+   font-family: vars.$font-dancing;
+   background-clip: text;
+
+   &::after{
+      content: '';
+      display: block;
+      margin: .5rem auto 0;
+      width: 60%;
+      height: .3rem;
+      background:vars.$main-color;
+   }
+}
+.up-button{
+   background-color: vars.$main-color;
+   position: fixed;
+   top: 90%;
+   right: 0;
+   padding: .5rem;
+   border-radius:.5rem ;
+   width: 2.5rem;
+   cursor: pointer;
+}
+.fade-up-button{
+   display: none;
+}
+
+.loading{
+   overflow: hidden;
+   &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 100vh;
+      background: vars.$black-color;
+   }
+}
+.spinner{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: inherit;
+   display: grid;
+   place-content: center;
+   z-index: 10001;
+      img{
+         width: 10rem;
+         height: 12rem;
+       animation: spinn 2s ease-in-out infinite ;
+      }
+      p{
+         color: vars.$white-color;
+         font-size: 2rem ;
+      }
+}
+
+@keyframes spinn {
+   0%{
+      transform: rotate(360deg);
+   }
+}

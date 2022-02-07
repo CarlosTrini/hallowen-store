@@ -1,0 +1,74 @@
+@use '../utils/variables'as vars;
+@use '../utils/mixins'as mixins;
+
+.hero {
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   margin-top: 9.5rem;
+   background: vars.$black-color url('../images/bg-home.png') center/cover no-repeat;
+
+   @include mixins.phone {
+      margin-top: 5rem;
+   }
+}
+
+.hero__content {
+   position: absolute;
+   bottom: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   opacity: 0;
+   filter: blur(10px);
+   animation: fade ease-in-out 15s infinite alternate;
+
+   &:nth-child(1) {
+      animation-delay: -5;
+   }
+
+   &:nth-child(2) {
+      animation-delay: 5s;
+   }
+
+   @include mixins.phone {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   &-title {
+      font-size: 3rem;
+      font-family: vars.$font-dancing;
+      color: transparent;
+      background: vars.$linear-orange-white;
+      background-clip: text;
+      @include mixins.tablet {
+         font-size: 4rem;
+      }
+   }
+
+   &-img {
+      flex: 0 1  map-get($map: vars.$images-sizes, $key:'xl');
+   }
+}
+
+
+@keyframes fade {
+   0%,
+   75% {
+      opacity: 1;
+      filter: blur(0);
+   }
+
+   50%,
+   100% {
+      filter: blur(25px);
+      opacity: 0;
+   }
+}

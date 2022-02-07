@@ -1,0 +1,86 @@
+@use '../utils/variables'as vars;
+@use '../utils/mixins'as mixins;
+@use '../utils/utilities'as utils;
+
+.good {
+   min-height: 75vh;
+   display:flex;
+   flex-direction: column;
+justify-content: center
+}
+
+.good__container {
+   @extend %container-cards;
+}
+
+.good__card {
+   position: relative;
+   text-align: center;
+   border-radius: 1rem;
+   overflow: hidden;
+   color: vars.$main-color;
+
+   &:hover .good__card-body {
+      opacity: 1;
+   }
+
+   &-header {
+      &-img {
+         width: 15rem;
+         height: 15rem;
+         margin: auto;
+         border-radius: 50%;
+         border:.1rem solid vars.$second-color;
+      }
+
+      &-title {
+         margin: 1rem 0;
+         text-transform: capitalize;
+      }
+   }
+
+   &-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      transition: all .3s ease-in-out;
+
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         background-color: vars.$black-color;
+         filter: opacity(.9);
+      }
+
+      &-price {
+         font-size: 2.5rem;
+         font-weight: vars.$bold;
+      }
+
+      &-buy {
+         display: block;
+         margin: auto;
+         width: fit-content;
+         padding: 1rem 1.8rem;
+         font-size: 1.3rem;
+         font-weight: vars.$bold;
+         color: vars.$black-color;
+         border-radius: 1rem 0 1rem;
+         background: vars.$white-color;
+      }
+   }
+
+
+}

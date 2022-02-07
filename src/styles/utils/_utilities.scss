@@ -1,0 +1,6 @@
+%container-cards{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(16rem, 30%));
+   gap: .5rem;
+   justify-content: space-evenly;
+}

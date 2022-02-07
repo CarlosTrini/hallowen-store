@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme_color" content="#ff0000">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <title>Hallowen Store</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="loading">
+    <div class="spinner" id="spinner">
+      <img src="./images/img-home-2.png" alt="">
+        <p>Cargando...</p>
+    </div>
+    <header class="header" id="home">
+      <nav class="nav container">
+        <div class="nav__logo">
+          <figure class="nav__logo_img">
+            <picture>
+              <source
+                srcset="./images/logo.webp"
+                alt="Icono de la navegación"
+                type="image/webp"
+              />
+              <img src="./images/logo.png" alt="Icono de la navegación" />
+            </picture>
+          </figure>
+          <h1 class="nav__logo_title">
+            <a href="#">Hallowen<span>Store</span></a>
+          </h1>
+        </div>
+        <!--nav__title-->
+
+        <div class="menu__responsive" id="menuResponsive">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav__links fade" id="navLinks">
+          <li>
+            <a href="#" class="active">Home</a>
+          </li>
+          <li>
+            <a href="#decorations">Decoration</a>
+          </li>
+          <li>
+            <a href="#goodies">Goodies</a>
+          </li>
+          <li>
+            <a href="#accessories">Accessories</a>
+          </li>
+          <li class="nav__links_contact">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <!--nav__links-->
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content container">
+          <h2 class="hero__content-title">Ready for trick or tread</h2>
+          <figure class="hero__content-img">
+            <picture>
+              <source srcset="./images/img-home-1.webp" type="image/webp" />
+              <img
+                src="./images/img-home-1.png"
+                alt="Imagen de calabaza para ilustración"
+              />
+            </picture>
+          </figure>
+        </div>
+        <!-- HERO -->
+        <div class="hero__content">
+          <h2 class="hero__content-title">Ready for trick or tread</h2>
+          <figure class="hero__content-img">
+            <picture>
+              <source srcset="./images/img-home-2.webp" type="image/webp" />
+              <img
+                src="./images/img-home-2.png"
+                alt="Imagen de calabaza para ilustración"
+              />
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <main>
+
+    <!-- DECORATION -->
+    <section class="decorations container" id="decorations">
+      <h2 class="titles-sections">Creepy Decorations</h2>
+
+      <div class="decorations__container" id="decoContainer">
+        <template id="templateDecorations">  <!--TEMPLATE-->
+        <div class="deco__card">
+          <header class="deco__card-header">
+            <figure class="deco__card-header-img">
+              <picture>
+                <source 
+                srcset="" 
+                type="image/webp" 
+                id="imgWebp" />
+                <img
+                  src=""
+                  alt="decoration - ghost 
+                  pendant"
+                  id="imgPng"
+                />
+              </picture>
+            </figure>
+            <h3 
+            class="deco__card-header-title"
+            id="decoTitle"
+            > </h3>
+          </header>
+          <div class="deco__card-body">
+            <p id="decoDescription"></p>
+            <p 
+            class="deco__card-body-discount"
+            id="decoDiscount"
+            ></p>
+            <p 
+            class="deco__card-body-price"
+            id="decoPrice"
+            ></p>
+          </div>
+          <footer class="deco__card-footer">
+            <a href="#" class="deco__card-footer-buy">Buy now</a>
+          </footer>
+        </template>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GODDIES -->
+    <section class="good container" id="goodies">
+      <h2 class="titles-sections">Creepy goddies</h2>
+
+      <div class="good__container" id="goodContainer">
+        <template id="templateGoodies"> <!--TEMPLATE-->
+        <div class="good__card">
+          <header class="good__card-header">
+            <figure class="good__card-header-img">
+              <picture>
+                <source 
+                srcset="" 
+                type="image/webp" 
+                id="goodImgWebp" />
+                <img
+                  src=""
+                  alt="decoration - ghost 
+                  pendant"
+                  id="goodImgPng"
+                />
+              </picture>
+            </figure>
+            <h3 
+            class="good__card-header-title"
+            id="goodTitle"
+            > pumpkin candy</h3>
+          </header>
+          <div class="good__card-body">
+            <p id="goodDescription">Lorem ipsum dolor sit amet.</p>
+            <p 
+            class="good__card-body-price"
+            id="goodPrice"
+            >9.99</p>
+            <a href="" class="good__card-body-buy">
+              ADD
+            </a>
+          </div>
+        </template>
+        </div>
+      </div>
+    </section>
+
+    <!--SOCIAL MEDIA -->
+    <section class="social container">
+      <div class="social__container">
+        <figure class="social__img">
+          <picture>
+            <source srcset="./images/img-social.webp" type='image/webp'>
+            <img src="./images/img-social.png" alt="social media img">
+          </picture>
+        </figure>
+        <div class="social__info">
+          <h2 class="social__info-title">More releases coming soon</h2>
+          <p >follow us on social media to find out what's new...</p>
+          <ul class="social__info-links">
+            <li>
+              <a href="">
+                <img src="./images/facebook.svg" alt="facebook link">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/instagram.svg" alt="instagram link">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/twitter.svg" alt="twitter link">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/youtube.svg" alt="youtube link">
+              </a>
+            </li>
+          </ul>
+        </div>
+    </section>
+    </div>
+
+    <!--ACCESSORIES-->
+    <section class="accessories container" id="accessories">
+      <h2 class="titles-sections">Creepy accessories</h2>
+      <div class="accessories__container" id="accessoriesContainer">
+      <template id="accessoriesTemplate">
+      <div class="accessory__card">
+          <figure class="accessory__card-img">
+            <picture>
+              <source srcset="" type="image/webp" id="accessoryImgWebp">
+              <img src="" alt="" id="accessoryImgPng">
+            </picture>
+          </figure>
+          <div class="accessory__card-body">
+            <h3 class="accessory-title" id="accessoryTitle">Porcelain cat</h3>
+            <p  class="accessory-characteristic"
+            id="accessoryCharacteristic">amazing colors</p>
+            <p id="accessoryDescription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum dolores voluptatem quis eligendi atque reiciendis repellendus asperiores repudiandae quas consequuntur.</p>
+
+            <div class="accessory__card-details-buy">
+              <div>
+                <p id="accessoryDiscount">12.3</p>
+                <p id="accessoryPrice">12.3</p>
+              </div>
+              <a href="">Buy now</a>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    </section>
+
+    <aside class="newsletter container">
+      <h2 class="titles-sections">Subscribe To Get All Notifications</h2>
+      <p>Leave your best e-mail and always stay up to date.</p>
+      <form class="news__form">
+        <div class="news__form-field">
+          <input type="text" placeholder="Your email">
+          <input type="submit" value="Reseive now">
+        </div>
+      </form>
+    </aside>
+
+    <footer class="footer container">
+      <figure class="footer__img">
+        <img src="./images/img-home-2.png" alt="">
+      </figure>
+      
+      <div class="footer__menu">
+        <h3 class="footer-titles">Menu</h3>
+        <ul>
+          <li> <a href="#decorations">Decorations</a>  </li>
+          <li> <a href="#goodies">Goodies</a>  </li>
+          <li> <a href="#accessories">Accessories</a>  </li>
+        </ul>
+      </div>
+
+      <div class="footer__institutional">
+        <h3 class="footer-titles">institutional</h3>
+        <ul>
+          <li> <a href="#">who we are</a>  </li>
+          <li> <a href="#">work with us</a>  </li>
+        </ul>
+      </div>
+      
+      <div class="footer__terms">
+        <h3 class="footer-titles">Terms</h3>
+        <ul>
+          <li> <a href="#">privacy policy</a>  </li>
+          <li> <a href="#">cookies police</a>  </li>
+          <li> <a href="#">terms of use</a>  </li>
+        </ul>
+      </div>
+      </footer>
+    </main>
+    
+    <div class="up-button fade-up-button" id="upButton">
+      <img src="./images/up.svg" alt="">
+    </div>
+
+    <!-- <script src="../node_modules/scrollreveal/dist/scrollreveal.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
